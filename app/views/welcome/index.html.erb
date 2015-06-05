@@ -29,7 +29,7 @@
 			
 			<img src="../assets/<%=l.img%>" width="30%" height="30%" class="img-responsive center-block" alt="">
 
-              <%= link_to l.description, producto_path(l)%>
+              <%= link_to l.title, producto_path(l)%><br>
 
               Published <%=distance_of_time_in_words_to_now(l.created_at)%>
 
@@ -44,7 +44,7 @@
 		<%@recurso.each do |l| %>
 			
 			<%= image_tag l.avatar.url, class: "img-responsive center-block", width: "30%", height: "30%" %>
-		    <%= link_to l.description, donacion_recurso_path(l)%>
+		    <%= link_to l.title, donacion_recurso_path(l)%>
           <br>
 
           Published <%=distance_of_time_in_words_to_now(l.created_at)%>

@@ -5,7 +5,7 @@
 			<img src="../assets/<%=l.img%>" width="30%" height="30%" class="img-responsive center-block" alt="">
 		</div>	
 		<div class="col-sm-4">
-          <%= link_to l.description, producto_path(l)%>
+          <%= link_to l.title, producto_path(l)%>
 		</div>
 		<div class="col-sm-4">
 			Published <%=distance_of_time_in_words_to_now(l.created_at)%> <br>

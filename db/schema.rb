@@ -51,14 +51,15 @@ ActiveRecord::Schema.define(version: 20150420231314) do
     t.boolean  "schedule"
     t.text     "description"
     t.integer  "state"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "idDonante"
     t.string   "direction"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.text     "title",               default: "Title", null: false
   end
 
   create_table "donacion_tiempos", force: :cascade do |t|
