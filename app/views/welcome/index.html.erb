@@ -31,7 +31,7 @@
 
 			<%=l.description%><br>
 
-			Creado: <%=l.created_at%>
+              Published <%=distance_of_time_in_words_to_now(l.created_at)%>
 
 			<br>
 		<%end%>
@@ -46,7 +46,7 @@
 			<%= image_tag l.avatar.url, class: "img-responsive center-block", width: "30%", height: "30%" %>
 			<%=l.description%><br>
 
-			Creado: <%=l.created_at%>
+          Published <%=distance_of_time_in_words_to_now(l.created_at)%>
 
 			<br>
 		<%end%>

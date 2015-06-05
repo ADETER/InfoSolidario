@@ -8,7 +8,7 @@
 			<%=l.description%>
 		</div>
 		<div class="col-sm-4">
-			Creado: <%=l.created_at%> <br>
+			Published <%=distance_of_time_in_words_to_now(l.created_at)%> <br>
 			Puntos: <%=l.points%>
 			<% if donante_signed_in? %>
 				<a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Obtener</a>
