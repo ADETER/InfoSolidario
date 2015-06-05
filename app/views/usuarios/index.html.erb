@@ -1,0 +1,32 @@
+
+
+<% if donante_signed_in? %>
+<div class="text-center">
+	<h1>Elige una opción</h1>
+	<br>
+</div>
+	
+<!--  -->
+
+<div class="row">
+
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<a href="<%=donacion_recursos_new_path%>" type="button" class="btn btn-primary center-block" role="button">Realizar una donacion</a>
+	</div>
+	<div class="col-sm-6">
+		<a href="<%=productos_index_path%>" type="button" class="btn btn-success center-block" role="button">Canjear puntos por premios</a>
+	</div>
+</div>
+
+<%@donacion.each do |d| %>
+
+<%end%>
+
+<%else%>
+<div class="text-center">
+	<h1>Su cuenta necesita ser validada</h1>
+</div>
+<%end%>	
+	

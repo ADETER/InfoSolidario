@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idOng: 1
+  schedule: false
+  description: MyText
+  state: 1
+
+two:
+  idOng: 1
+  schedule: false
+  description: MyText
+  state: 1

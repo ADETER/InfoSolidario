@@ -1,0 +1,38 @@
+	
+<div class="text-center">
+	<%= form_for @donacion, :html => { :multipart => true } do |f| %>
+	<h1>Introduce los datos de la nueva donacion</h1><br>
+<form role="role">	
+	<div class="form-group">
+		<label for="description">Descripcion: </label><br>
+		<%= f.text_area :description%>
+	</div>
+	<div class="form-group">
+		<label for="">Direccion (solo visible para ONG): </label><br>
+		<%= f.text_area :direction%>
+
+	</div>
+	<div class="form-group">
+		<label for="">Mañana: </label>
+		<%= radio_button_tag(:schedule, "true")%>
+		<label for="">Tarde: </label>
+		<%= radio_button_tag(:schedule, "false")%>
+
+	</div>
+	<div class="form-group">
+		<label for="">Avatar:</label>
+    	<div class="center-block">
+    		<%= f.file_field :avatar %> <br>
+    	</div> 
+	</div>
+	<div class="" style="visibility: hidden">
+		<%= f.number_field :idDonante, :value => current_donante.id%> 
+	</div>
+	<div class="form-group">
+		<%= f.submit "Guardar", class:"btn btn-primary"%>
+	</div>
+</form>
+
+<%end%>
+
+</div>

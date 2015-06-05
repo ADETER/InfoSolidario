@@ -1,0 +1,20 @@
+<%@lista.each do |l| %>
+<div class="text-center">
+<div class="row">
+		<div class="col-sm-4">
+			<img src="../assets/<%=l.img%>" width="30%" height="30%" class="img-responsive center-block" alt="">
+		</div>	
+		<div class="col-sm-4">
+			<%=l.description%>
+		</div>
+		<div class="col-sm-4">
+			Creado: <%=l.created_at%> <br>
+			Puntos: <%=l.points%>
+			<% if donante_signed_in? %>
+				<a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Obtener</a>
+			<%end%>
+		</div>
+		<br><br>
+</div>
+</div>
+<%end%>
