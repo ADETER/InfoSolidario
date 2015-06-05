@@ -1,0 +1,12 @@
+<div class="text-center">
+  <h1>Producto</h1><br>
+  <%=@producto.description%>
+  <br><br>
+  <%= image_tag @producto.img, class: "img-responsive center-block", width: "30%", height: "30%"  %>
+  <br>
+  Published <%=distance_of_time_in_words_to_now(@producto.created_at)%> <br>
+  Puntos: <%=@producto.points%>
+  <% if donante_signed_in? %>
+      <a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Obtener</a>
+  <%end%>
+</div>
