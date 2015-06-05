@@ -25,6 +25,11 @@ Rails.application.routes.draw do
 
   #get 'donacion/recursos'
 
+
+  resources :productos
+
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :ongs
