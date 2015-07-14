@@ -9,12 +9,11 @@
     </div>
 	<div class="form-group">
 		<label for="description">Descripcion: </label><br>
-		<%= f.text_area :description%>
+		<%= f.text_area :description, :cols => "100%" %>
 	</div>
 	<div class="form-group">
-		<label for="">Direccion (solo visible para ONG): </label><br>
-		<%= f.text_area :direction%>
-
+		<label for="direction">Direccion (solo visible para ONG): </label><br>
+		<%= f.text_area :direction, :cols => "100%" %>
 	</div>
 	<div class="form-group">
 		<label for="">Horario de recogida ( </label>
@@ -26,9 +25,9 @@
 
 	</div>
 	<div class="form-group">
-		<label for="">Avatar:</label>
     	<div class="center-block">
-    		<%= f.file_field :avatar %> <br>
+          <label for="">Imagen: <%= f.file_field :avatar %></label>
+
     	</div> 
 	</div>
 	<div class="" style="visibility: hidden">
