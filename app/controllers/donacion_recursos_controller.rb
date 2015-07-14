@@ -14,6 +14,7 @@ class DonacionRecursosController < ApplicationController
 
   	@donacion = DonacionRecurso.create(donacionrecursos_params)
   	redirect_to @donacion
+
   end
 
   def donacionrecursos_params

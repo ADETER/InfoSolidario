@@ -2,7 +2,11 @@
 <div class="text-center">
 	<%= form_for @donacion, :html => { :multipart => true } do |f| %>
 	<h1>Introduce los datos de la nueva donacion</h1><br>
-<form role="role">	
+<form role="role">
+    <div class="form-group">
+      <label for="tittle">Título: </label><br>
+      <%= f.text_field :title %>
+    </div>
 	<div class="form-group">
 		<label for="description">Descripcion: </label><br>
 		<%= f.text_area :description%>
@@ -13,10 +17,12 @@
 
 	</div>
 	<div class="form-group">
-		<label for="">Mañana: </label>
-		<%= radio_button_tag(:schedule, "true")%>
+		<label for="">Horario de recogida ( </label>
+        <label for="">Mañana: </label>
+		<%= f.radio_button :schedule, true, :checked => true %>
 		<label for="">Tarde: </label>
-		<%= radio_button_tag(:schedule, "false")%>
+		<%= f.radio_button :schedule, false%>
+        <label for=""> )</label>
 
 	</div>
 	<div class="form-group">
