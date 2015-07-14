@@ -1,11 +1,15 @@
 <%= form_tag productos_index_path, :method =>:get do %>
     <table>
       <tr>
-        <td>Palabra clave:</td><td><%= text_field_tag :descripcion,  params[:descripcion] %></td>
+        <td>Palabra clave:</td><td><%= text_field_tag 'descripcion'%></td>
       </tr>
       <tr>
-        <td>Puntos:</td><td><%= text_field_tag :points, params[:points] %></td>
+        <td>Puntos min:</td><td><%= text_field_tag 'minimo'%></td>
       </tr>
+      <tr>
+        <td>Puntos max:</td><td><%= text_field_tag 'maximo'%></td>
+      </tr>
+
       <tr>
         <td><%= submit_tag "Buscar", :name => nil %></td>
       </tr>

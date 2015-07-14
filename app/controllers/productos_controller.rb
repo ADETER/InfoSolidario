@@ -4,7 +4,8 @@ class ProductosController < ApplicationController
       fulltext params[:descripcion] do
         boost_fields :title => 2.0
       end
-      with(:points).greater_than(params[:points].to_i) if params[:points].present?
+      with(:points).greater_than(params[:minimo].to_i) if params[:minimo].present?
+      with(:points).less_than(params[:maximo].to_i) if params[:maximo].present?
     end
     @lista = @search.results
     @recurso = DonacionRecurso.all
