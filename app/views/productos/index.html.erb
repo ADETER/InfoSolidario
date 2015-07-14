@@ -1,3 +1,20 @@
+<%= form_tag productos_index_path, :method =>:get do %>
+    <table>
+      <tr>
+        <td>Palabra clave:</td><td><%= text_field_tag :descripcion,  params[:descripcion] %></td>
+      </tr>
+      <tr>
+        <td>Puntos:</td><td><%= text_field_tag :points, params[:points] %></td>
+      </tr>
+      <tr>
+        <td><%= submit_tag "Buscar", :name => nil %></td>
+      </tr>
+    </table>
+
+
+
+<% end %>
+
 <%@lista.each do |l| %>
 <div class="text-center">
 <div class="row">
