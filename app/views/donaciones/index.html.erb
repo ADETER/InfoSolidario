@@ -5,7 +5,7 @@
 			<%= image_tag l.avatar.url, class: "img-responsive center-block", width: "30%", height: "30%" %>
 		</div>	
 		<div class="col-sm-4">
-          <%= link_to l.description, donacion_recurso_path(l)%>
+          <%= link_to l.title, donacion_recurso_path(l)%>
 		</div>
 		<div class="col-sm-4">
 			Published <%=distance_of_time_in_words_to_now(l.created_at)%>
