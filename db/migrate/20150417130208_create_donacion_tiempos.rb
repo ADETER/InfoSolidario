@@ -3,7 +3,7 @@ class CreateDonacionTiempos < ActiveRecord::Migration
     create_table :donacion_tiempos do |t|
       t.integer :idOng
       t.boolean :schedule
-      t.text :description
+      t.text :direction
       t.integer :state
 
       t.timestamps null: false

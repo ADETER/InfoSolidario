@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="Rails infosolidario: development" uuid="03127a68-9972-4f10-b917-26ecb6dc664c">
+  <data-source name="Rails infosolidario: development" uuid="8ebe1b0a-8f99-484b-b96a-b1ef428585b0">
     <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
@@ -83,6 +83,10 @@
       <column name="last_sign_in_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="current_sign_in_ip" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="last_sign_in_ip" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="avatar_file_name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="avatar_content_type" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="avatar_file_size" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="avatar_updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
       <index name="index_donantes_on_reset_password_token" unique="true" columns="reset_password_token"/>
       <index name="index_donantes_on_email" unique="true" columns="email"/>

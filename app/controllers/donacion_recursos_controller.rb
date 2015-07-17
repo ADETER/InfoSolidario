@@ -18,7 +18,7 @@ class DonacionRecursosController < ApplicationController
   end
 
   def donacionrecursos_params
-    params.require(:donacion_recurso).permit(:description,:direction,:schedule,:state,:idDonante,:avatar)
+    params.require(:donacion_recurso).permit(:direction,:direction,:schedule,:state,:idDonante,:avatar)
   end
 
 end

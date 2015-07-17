@@ -2,7 +2,7 @@ class Producto < ActiveRecord::Base
 
   searchable do
     integer :points
-    text :description
+    text :direction
     text :title
 
   end

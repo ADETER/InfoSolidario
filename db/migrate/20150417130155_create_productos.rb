@@ -5,7 +5,7 @@ class CreateProductos < ActiveRecord::Migration
       t.integer :idEmpresa
       t.string :img
       t.integer :idDonante
-      t.text :description
+      t.text :direction
 
       t.timestamps null: false
     end

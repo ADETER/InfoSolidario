@@ -2,20 +2,38 @@
 
 <% if donante_signed_in? %>
 <div class="text-center">
-	<h1>Elige una opción</h1>
-	<br>
+
 </div>
 	
 <!--  -->
 
 <div class="row">
-
+  <div class="col-sm-3">
+    <%	if current_donante.avatar.nil?  %>
+      <%= image_tag @me.avatar.url, class: "img-responsive center-block", width: "50%", height: "50%"%>
+    <%else %>
+      <img src="../assets/avatar_empty.png" class="img-responsive", style=" " alt="">
+    <%	 end %>
+  </div>
+  <div class="col-sm-9">
+    <h4>Nombre: </h4>
+    <%=	 @me.name %> <br>
+    <h4>Email: </h4>
+    <%=	 @me.email %> <br>
+    <h4>Telefono: </h4>
+    <%=	 @me.contacto %> <br>
+    <h4>Direccion: </h4>
+    <%=	 @me.description %> <br>
+  </div>
 </div>
 <div class="row">
-	<div class="col-sm-6">
+    <div class="col-sm-4">
+        <a href="<%=edit_usuarios_path%>" type="button" class="btn btn-warning center-block" role="button">Editar campos</a>
+    </div>
+	<div class="col-sm-4">
 		<a href="<%=donacion_recursos_new_path%>" type="button" class="btn btn-primary center-block" role="button">Realizar una donacion</a>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-4">
 		<a href="<%=productos_index_path%>" type="button" class="btn btn-success center-block" role="button">Canjear puntos por premios</a>
 	</div>
 </div>
