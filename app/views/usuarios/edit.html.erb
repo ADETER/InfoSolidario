@@ -1,0 +1,37 @@
+  <%= form_for @me, url: usuarios_path, :html => { :multipart => true } do |f| %>
+      <div class="row">
+        <div class="col-sm-3">
+          <%	if current_donante.avatar.nil?  %>
+              <%= image_tag @me.avatar.url, class: "img-responsive center-block", width: "50%", height: "50%"%>
+          <%else %>
+              <img src="../assets/avatar_empty.png" class="img-responsive", style=" " alt="">
+          <%	 end %>
+          <div class="form-group">
+            <%=	 f.file_field :avatar%>
+            </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="form-group">
+          <h4>Nombre: </h4>
+          <%=	f.text_field :name %> <br>
+          <h4>Email: </h4>
+          <%=	 f.text_field :email %> <br>
+          <h4>Telefono: </h4>
+          <%=	 f.text_field :contacto %> <br>
+          <h4>Direccion: </h4>
+          <%=	 f.text_area :description %> <br>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-center" >
+          <div class="form-group">
+            <%= f.submit "Guardar", class:"btn btn-primary"%>
+          </div>
+        </div>
+
+      </div>
+
+
+  <%end%>
+

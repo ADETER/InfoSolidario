@@ -9,10 +9,10 @@
 
 <div class="row">
   <div class="col-sm-3">
-    <%	if current_donante.avatar.nil?  %>
-      <%= image_tag @me.avatar.url, class: "img-responsive center-block", width: "50%", height: "50%"%>
-    <%else %>
-      <img src="../assets/avatar_empty.png" class="img-responsive", style=" " alt="">
+    <%	if @me.avatar_file_name.nil?  %>
+        <img src="../assets/avatar_empty.png" class="img-responsive", style=" " alt="">
+  <%else %>
+        <%= image_tag @me.avatar.url, class: "img-responsive center-block", width: "50%", height: "50%"%>
     <%	 end %>
   </div>
   <div class="col-sm-9">
