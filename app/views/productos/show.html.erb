@@ -7,6 +7,11 @@
   Published <%=distance_of_time_in_words_to_now(@producto.created_at)%> <br>
   Puntos: <%=@producto.points%>
   <% if donante_signed_in? %>
-      <a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Obtener</a>
+      <% if @me.points < @producto.points%>
+          <a href="<%=welcome_index_path%>" type="button" class="btn btn-danger disabled" role="button">Obtener</a>
+      <%else%>
+          <a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Obtener</a>
+
+      <%end%>
   <%end%>
 </div>

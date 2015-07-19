@@ -15,5 +15,6 @@ class ProductosController < ApplicationController
 
   def show
     @producto = Producto.find(params[:id])
+    @me = current_donante
   end
 end
