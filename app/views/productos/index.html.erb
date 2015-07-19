@@ -31,8 +31,13 @@
 		<div class="col-sm-4">
 			Published <%=distance_of_time_in_words_to_now(l.created_at)%> <br>
 			Puntos: <%=l.points%>
-			<% if donante_signed_in? %>
-				<a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Obtener</a>
+			<% if donante_signed_in?%>
+              <% if @me.points < l.points%>
+                  <a href="<%=welcome_index_path%>" type="button" class="btn btn-danger disabled" role="button">Obtener</a>
+        <%else%>
+                    <a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Obtener</a>
+
+              <%end%>
 			<%end%>
 		</div>
 		<br><br>

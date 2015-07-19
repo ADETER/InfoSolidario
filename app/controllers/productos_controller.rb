@@ -1,7 +1,7 @@
 class ProductosController < ApplicationController
   def index
     @search = Sunspot.search(Producto) do
-      fulltext params[:descripcion] do
+      fulltext params[:description] do
         boost_fields :title => 2.0
       end
       with(:points).greater_than(params[:minimo].to_i) if params[:minimo].present?
@@ -9,6 +9,8 @@ class ProductosController < ApplicationController
     end
     @lista = @search.results
     @recurso = DonacionRecurso.all
+    @me = current_donante
+
   end
 
   def show

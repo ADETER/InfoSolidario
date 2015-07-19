@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 20150717164233) do
   create_table "donantes", force: :cascade do |t|
     t.string   "name"
     t.string   "img"
-    t.text     "direction"
+    t.text     "description"
     t.string   "contacto"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 20150717164233) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "points",                 default: 0,  null: false
   end
 
   add_index "donantes", ["email"], name: "index_donantes_on_email", unique: true
