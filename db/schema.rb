@@ -93,7 +93,6 @@ ActiveRecord::Schema.define(version: 20150721164615) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.integer  "points",                 default: 0,  null: false
   end
 
   add_index "donantes", ["email"], name: "index_donantes_on_email", unique: true
