@@ -1,6 +1,6 @@
 
 
-<% if donante_signed_in? %>
+<% if @usuariosconnect%>
 <div class="text-center">
 
 </div>
@@ -25,30 +25,36 @@
     <h4>Direccion: </h4>
     <%=	 @me.description %> <br>
   </div>
+  <% if donante_signed_in? %>
   <div class="col-sm-4">
     <h4>Puntos:</h4>
     <%=	 @me.points %><br>
   </div>
+      <%end%>
 </div>
 <div class="row">
     <div class="col-sm-4">
         <a href="<%=edit_usuarios_path%>" type="button" class="btn btn-warning center-block" role="button">Editar campos</a>
     </div>
+  <% if donante_signed_in? %>
 	<div class="col-sm-4">
 		<a href="<%=donacion_recursos_new_path%>" type="button" class="btn btn-primary center-block" role="button">Realizar una donacion</a>
 	</div>
 	<div class="col-sm-4">
 		<a href="<%=productos_index_path%>" type="button" class="btn btn-success center-block" role="button">Canjear puntos por premios</a>
 	</div>
+      <% end %>
+  <% if ong_signed_in? %>
+      div class="col-sm-4">
+      <a href="<%=donacion_recursos_index_path%>" type="button" class="btn btn-success center-block" role="button">Gestionar una donación</a>
+      </div>
+  <%end%>
+
 </div>
 
 <%@donacion.each do |d| %>
 
 <%end%>
 
-<%else%>
-<div class="text-center">
-	<h1>Su cuenta necesita ser validada</h1>
-</div>
 <%end%>	
 	
