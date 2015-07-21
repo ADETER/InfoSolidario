@@ -1,7 +1,7 @@
   <%= form_for @me, url: usuarios_path, :html => { :multipart => true } do |f| %>
       <div class="row">
         <div class="col-sm-3">
-          <%	if current_donante.avatar.nil?  %>
+          <%	if @me.avatar.nil?  %>
               <%= image_tag @me.avatar.url, class: "img-responsive center-block", width: "50%", height: "50%"%>
           <%else %>
               <img src="../assets/avatar_empty.png" class="img-responsive", style=" " alt="">
