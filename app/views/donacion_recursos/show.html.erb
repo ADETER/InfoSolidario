@@ -4,4 +4,7 @@
 	<br><br>
 	<%= image_tag @donacion.avatar.url, class: "img-responsive center-block", width: "30%", height: "30%"  %>
 	<br>
+  <% if ong_signed_in?%>
+      <a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Gestionar</a>
+  <% end%>
 </div>

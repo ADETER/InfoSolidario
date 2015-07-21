@@ -9,8 +9,12 @@
 		</div>
 		<div class="col-sm-4">
 			Published <%=distance_of_time_in_words_to_now(l.created_at)%>
-		</div>
-		<br><br>
+          <% if ong_signed_in?%>
+              <a href="<%=welcome_index_path%>" type="button" class="btn btn-success" role="button">Gestionar</a>
+          <% end%>
+        </div>
+
+      <br><br>
 </div>
 
 </div>
